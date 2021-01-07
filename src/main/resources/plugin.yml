@@ -1,0 +1,4 @@
+name: PlayerNotifier
+version: ${project.version}
+main: net.playernotifier.PlayerNotifier
+api-version: 1.16
