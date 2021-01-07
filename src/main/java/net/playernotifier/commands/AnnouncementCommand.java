@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.jetbrains.annotations.NotNull;
 
-public class AnnoucenementCommand implements CommandExecutor {
+public class AnnouncementCommand implements CommandExecutor {
 
     private final CooldownManager cooldown = new CooldownManager();
     private final PlayerNotifier plugin;
 
-    public AnnoucenementCommand(PlayerNotifier plugin) {
+    public AnnouncementCommand(PlayerNotifier plugin) {
         this.plugin = plugin;
     }
 
