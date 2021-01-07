@@ -16,16 +16,16 @@ public class PlayerChatListener implements Listener {
         final Player pinger = event.getPlayer(); // unused variable btw
         final String msg = event.getMessage();
         for(final Player player : Bukkit.getOnlinePlayers()) {
-            if(player.hasPermission("playernotifier.everyone")) {
+            if(pinger.hasPermission("playernotifier.everyone")) {
                 if (msg.contains("@everyone")) {
                     player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1f);
                     player.sendMessage("§6You got mentioned by §a" + pinger.getName());
                     player.sendActionBar("§6New Ping!");
-                    continue;
                 }
             }
-            handleMentions(pinger, event.getMessage());
         }
+        handleMentions(pinger, event.getMessage());
+
     }
 
 
